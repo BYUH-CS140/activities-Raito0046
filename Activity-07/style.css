@@ -1,0 +1,58 @@
+/* Styling for the body */
+body {
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styling for the header */
+header {
+    background-color: #030303;
+    padding: 20px;
+}
+
+/* Styling for the title (h1) */
+h1 {
+    color: #FFD700;
+    text-align: center;
+}
+
+/* Styling for the image */
+.styled-image {
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px grey;
+    width: 300px;
+    margin: 20px auto;
+}
+
+/* Styling for the footer */
+#pageFooter {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* New style for the section */
+section {
+    padding: 20px;
+}
+
+/* New style for paragraphs */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* New style for hover effect on the image */
+.styled-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Google font*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
