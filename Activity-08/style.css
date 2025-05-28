@@ -1,0 +1,57 @@
+/* 1. Global Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Base Page Styling */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* 3. Header Banner */
+#page-header {
+    background-image: url("sunflowers.jpg");
+    background-size: cover;
+    color: #ffffff;
+    padding: 1rem;
+}
+.title {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+/* 4. Navigation Bar */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-list > li {
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+}
+.nav-list a:hover {
+    color: #333333;
+    background: #ffffff;
+}
+
+/* 5. Resources List Section */
+.resources {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 6px;
+    width: 60%;
+    margin: 2rem auto;
+}
+.resources li {
+    margin-bottom: 0.5rem;
+}
