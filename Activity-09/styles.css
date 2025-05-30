@@ -1,0 +1,67 @@
+/* Remove default list style and padding */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+    display: flex;
+    /* horizontal */
+}
+
+/* Horizontal menu items */
+.menu > li {
+    position: relative;
+}
+
+/* Menu links styling */
+.menu > li > a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Hover effect */
+.menu > li > a:hover {
+    background: #FFD700;
+    color: #222;
+    border-radius: 4px;
+}
+
+/* Dropdown menu */
+.menu li .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #444;
+    list-style: none;
+    min-width: 150px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li a {
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    background: #444;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.dropdown li a:hover {
+    background: #FFD700;
+    color: #222;
+}
+
+/* Optional: Add some spacing for icons */
+.menu i {
+    margin-right: 0.5em;
+}
