@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple ToDo List</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="site-title">Simple ToDo</div>
+      <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ai-game.html">AI Game</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <h1>Welcome!</h1>
+      <p>Stay organized and productive. Manage your daily tasks with ease.</p>
+      <p class="msg">Let’s accomplish your goals, one task at a time!</p>
+    </section>
+
+    <div class="todo-layout">
+      <aside class="sidebar">
+        <form id="todo-form" autocomplete="off">
+          <input type="text" id="todo-input" placeholder="Add new task..." required />
+          <button type="submit" id="add-btn">+</button>
+        </form>
+        <div class="filters">
+          <button type="button" class="filter-btn active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="active">Active</button>
+          <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <div class="stats">
+          <span id="task-count">Tasks: 0</span>
+          <span id="completed-count">Completed: 0</span>
+          <div class="progress-bar-bg">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
+      </aside>
+      <section class="main-content">
+        <ul id="todo-list"></ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <small>&copy; 2025 Simple ToDo for Students & Young Professionals</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
