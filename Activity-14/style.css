@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  /* Mobile/tablet: no grid, just stacking */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header, .nav, .main, .footer {
+  background: #fff;
+  border-radius: 10px;
+  margin: 12px 8px;
+  padding: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.header {
+  background: #4caf50;
+  color: #fff;
+  text-align: center;
+}
+.nav {
+  background: #2196f3;
+  color: #fff;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.main {
+  background: #e3f2fd;
+}
+.footer {
+  background: #4caf50;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Tablet breakpoint (min-width: 768px) */
+@media (min-width: 768px) {
+  .nav ul {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .main {
+    font-size: 1.1em;
+  }
+
+  /* Gallery: 2 images/row */
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .gallery img {
+    width: calc(50% - 8px);
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+/* Desktop breakpoint (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .header { grid-area: header; margin: 0; }
+  .nav { grid-area: nav; margin: 0; }
+  .main { grid-area: main; margin: 0; }
+  .footer { grid-area: footer; margin: 0; }
+
+  /* Gallery: 3 images/row */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .gallery img {
+    width: 100%;
+    flex: none;
+  }
+}
