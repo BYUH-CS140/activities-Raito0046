@@ -17,7 +17,7 @@ body {
   grid-template-columns: 1fr 2fr 1fr;
   /* 2 rows: 60px and 120px */
   grid-template-rows: 60px 120px;
-  gap: 16px; /* uniform gap */
+  gap: 10px; /* uniform gap */
   max-width: 800px;
   margin: 0 auto;
   background: #fff;
