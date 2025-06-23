@@ -7,16 +7,16 @@ body {
 }
 
 header, nav, section, footer {
-  max-width: 650px;
-  margin: 0 auto 24px auto;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   background: #fff;
   padding: 20px 28px;
+  margin: 0 auto 24px auto;
+  max-width: 650px;
 }
 
 header {
-  background:url('../images/sakura1.jpg') repeat;
+  background: url('../images/sakura1.jpg') repeat;
   color: #040404;
   text-align: center;
   margin-top: 24px;
@@ -35,8 +35,7 @@ footer {
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: column; /* moblie */
-  justify-content: flex-start;
+  flex-direction: column; /* mobile: vertical menu */
   gap: 8px;
   padding: 0;
   margin: 0;
@@ -110,41 +109,77 @@ h1, h2, h3 {
   margin-bottom: 0.5em;
 }
 
-/* tablet 2 column */
+/* ---- Tablet breakpoint (min-width: 768px) ---- */
 @media (min-width: 768px) {
   .container {
     display: flex;
-    flex-direction: row;
-    gap: 32px;
-    max-width: 1080px;
+    gap: 24px;
+    max-width: 960px;
     margin: 0 auto;
   }
   nav {
-    max-width: 200px;
-    flex: 0 0 180px;
+    flex: 0 0 220px;
+    max-width: 220px;
     margin: 0 0 24px 0;
-    padding: 14px 10px;
+    padding: 16px 10px;
   }
-  main, section {
-    max-width: 800px;
-    flex: 1;
+  section, main {
+    flex: 1 1 0;
+    max-width: 720px;
   }
   nav ul {
-    flex-direction: row; /* side */
+    flex-direction: row; /* horizontal menu */
     gap: 16px;
     justify-content: flex-start;
     background: #eee;
+    padding: 8px 0;
+  }
+  header, footer {
+    max-width: 960px;
   }
 }
 
-/* desktop 2 column */
+/* ---- Desktop breakpoint (min-width: 1024px) ---- */
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1200px;
-    gap: 40px;
+  body {
+    background-size: cover;
   }
-  header, footer {
-    max-width: 1200px;
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav section"
+      "footer footer";
+    grid-template-columns: 250px 1fr;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  header {
+    grid-area: header;
+    margin: 0 0 24px 0;
+    max-width: unset;
+  }
+  nav {
+    grid-area: nav;
+    margin: 0;
+    max-width: unset;
+    padding: 18px 10px;
+  }
+  section, main {
+    grid-area: section;
+    margin: 0;
+    max-width: unset;
+  }
+  footer {
+    grid-area: footer;
+    margin: 24px 0 0 0;
+    max-width: unset;
+  }
+  nav ul {
+    flex-direction: row;
+    gap: 18px;
+    padding: 10px 0;
   }
 }
 
