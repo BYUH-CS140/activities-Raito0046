@@ -232,8 +232,8 @@ function showResult() {
   quiz.style.display = "none";
 
   const tinfo = mbtiTypes[type];
-  document.getElementById('result-img1').src = `img/mbti/${type}-1.jpg`;
-  document.getElementById('result-img2').src = `img/mbti/${type}-2.jpg`;
+  document.getElementById('result-img1').src = `Images/${type}1.jpg`;
+  document.getElementById('result-img2').src = `Images/${type}2.jpg`;
   document.getElementById('result-type').innerText = tinfo.label;
   document.getElementById('result-aliases').innerText = tinfo.aliases ? tinfo.aliases.join(", ") : "";
   document.getElementById('result-desc').innerText = tinfo.desc;

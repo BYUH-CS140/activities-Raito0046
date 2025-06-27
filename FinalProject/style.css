@@ -1,23 +1,32 @@
 body {
   margin: 0;
   font-family: 'Rounded Mplus 1c', 'Arial', sans-serif;
-  background: #f8f9fa;
+  background: url('Images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #333;
 }
 header {
-  background: #ffecd2;
+  background: url('Images/header.jpg') no-repeat center center fixed;
+  background-size: cover;
   padding: 2rem 1rem 1rem 1rem;
   text-align: center;
 }
 h1 {
   margin: 0;
   font-size: 2.2rem;
-  color: #5d5c61;
+  color: #f4c4f7;
 }
 .catch {
   font-size: 1.1rem;
-  color: #7d7c7a;
+  color: #f7f6fc;
   margin-top: 0.5rem;
+}
+
+.center-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  width: 100%;
 }
 .main-visual img {
   width: 100%;
@@ -128,7 +137,7 @@ footer {
 }
 
 .result-info {
-  text-align: left;
+  text-align: left; 
 }
 
 .result-btn-area {
@@ -271,9 +280,9 @@ footer {
     gap: 0.8em;
   }
   .result-images img {
-    width: 90vw;
+    width: 300px;
+    height: 300px;
     max-width: 300px;
-    height: 120px;
     margin: 0 auto;
   }
   .result-info {
@@ -295,9 +304,9 @@ footer {
     gap: 1.2em;
   }
   .result-images img {
-    width: 180px;
-    height: 180px;
-    max-width: 45vw;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
   }
   .result-info {
     margin-top: 1.4em;
@@ -322,9 +331,9 @@ footer {
     min-width: 140px;
   }
   .result-images img {
-    width: 160px;
-    height: 160px;
-    max-width: 160px;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
   }
   .result-info {
     flex: 1 1 0;
@@ -333,5 +342,43 @@ footer {
     min-width: 300px;  
     word-break: normal;
     white-space: normal; 
+  }
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.5rem;
+  max-width: 960px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.image-grid img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67,198,172,0.07);
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s;
+}
+.image-grid img:hover {
+  transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+  }
+  .image-grid img {
+    width: 46vw;
+    height: 46vw;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 170px;
+    max-height: 170px;
   }
 }
