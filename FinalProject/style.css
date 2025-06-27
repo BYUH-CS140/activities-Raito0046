@@ -1,0 +1,210 @@
+/* Mobile-first base styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f2f7fb;
+  color: #222;
+}
+
+header {
+  background: linear-gradient(90deg, #72e0d1 40%, #ffb86c 100%);
+  padding: 1em 0.5em;
+  text-align: center;
+  border-bottom: 3px solid #7fd5e6;
+}
+
+header h1 {
+  margin: 0 0 0.3em 0;
+  font-size: 2rem;
+  color: #226d68;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #226d68;
+  font-weight: bold;
+  padding: 0.4em 0.7em;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+  background: #e7f7f9;
+  color: #1d3440;
+}
+
+.hero {
+  text-align: center;
+  padding: 2.5em 1em 2em 1em;
+}
+
+.hero h2 {
+  font-size: 1.7rem;
+  margin: 0.7em 0;
+  color: #418ba5;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 2em;
+}
+
+.btn-main, .btn-sub {
+  display: inline-block;
+  margin: 0.5em 0.7em;
+  padding: 0.8em 1.4em;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.btn-main {
+  background: #72e0d1;
+  color: #226d68;
+}
+
+.btn-main:hover {
+  background: #48bfa4;
+  color: #fff;
+}
+
+.btn-sub {
+  background: #ffb86c;
+  color: #715600;
+}
+
+.btn-sub:hover {
+  background: #ff9800;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  color: #888;
+  padding: 2em 0 1em 0;
+  font-size: 0.95rem;
+  background: none;
+}
+
+/* Container for main content */
+.container {
+  max-width: 500px;
+  margin: 2em auto 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(100, 180, 220, 0.07);
+  padding: 2em 1em 2em 1em;
+}
+
+h2 {
+  color: #418ba5;
+  margin-bottom: 1em;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input, textarea, select {
+  padding: 0.7em;
+  border-radius: 8px;
+  border: 1px solid #b3e4f7;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: 2px solid #72e0d1;
+  border-color: #72e0d1;
+}
+
+label {
+  font-weight: bold;
+  color: #226d68;
+}
+
+/* Animal card styles */
+.animal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.animal-card {
+  background: #e7f7f9;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 1px 4px rgba(100,180,220,0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.animal-card h3 {
+  margin: 0;
+  color: #226d68;
+}
+
+.animal-card .feature {
+  font-size: 1rem;
+  color: #418ba5;
+}
+
+.animal-card .fact {
+  font-size: 0.98rem;
+  color: #715600;
+}
+
+/* Responsive design for tablets and above */
+@media (min-width: 600px) {
+  .container {
+    max-width: 650px;
+    padding: 2.5em 2em 2.5em 2em;
+  }
+  .hero {
+    padding: 4em 0 3em 0;
+  }
+  .hero h2 {
+    font-size: 2.1rem;
+  }
+  .animal-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+  .animal-card {
+    width: 45%;
+    min-width: 260px;
+  }
+}
+
+/* Responsive design for desktop */
+@media (min-width: 900px) {
+  header, .hero, .container, footer {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .hero {
+    padding: 6em 0 4em 0;
+  }
+}

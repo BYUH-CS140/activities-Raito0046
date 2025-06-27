@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Simple ToDo List</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Future Animal Encyclopedia</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header: site navigation -->
   <header>
-    <nav class="navbar">
-      <div class="site-title">Simple ToDo</div>
-      <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
+    <h1>Future Animal Encyclopedia</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="encyclopedia.html">Encyclopedia</a></li>
+        <li><a href="create.html">Create Animal</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
       </ul>
     </nav>
   </header>
-  <main class="container">
-    <section class="welcome">
-      <h1>Welcome!</h1>
-      <p>Stay organized and productive. Manage your daily tasks with ease.</p>
-      <p class="msg">Let’s accomplish your goals, one task at a time!</p>
-    </section>
-
-    <div class="todo-layout">
-      <aside class="sidebar">
-        <form id="todo-form" autocomplete="off">
-          <input type="text" id="todo-input" placeholder="Add new task..." required />
-          <button type="submit" id="add-btn">+</button>
-        </form>
-        <div class="filters">
-          <button type="button" class="filter-btn active" data-filter="all">All</button>
-          <button type="button" class="filter-btn" data-filter="active">Active</button>
-          <button type="button" class="filter-btn" data-filter="completed">Completed</button>
-        </div>
-        <div class="stats">
-          <span id="task-count">Tasks: 0</span>
-          <span id="completed-count">Completed: 0</span>
-          <div class="progress-bar-bg">
-            <div id="progress-bar"></div>
-          </div>
-        </div>
-      </aside>
-      <section class="main-content">
-        <ul id="todo-list"></ul>
-      </section>
-    </div>
-  </main>
+  <!-- Main visual section -->
+  <section class="hero">
+    <h2>Welcome to the Future of Animals!</h2>
+    <p>Discover, learn, and create fantastic creatures with the power of AI.<br>
+    For young explorers and creators!</p>
+    <a href="encyclopedia.html" class="btn-main">Explore the Encyclopedia</a>
+    <a href="create.html" class="btn-sub">Create Your Own Animal</a>
+  </section>
+  <!-- Footer -->
   <footer>
-    <small>&copy; 2025 Simple ToDo for Students & Young Professionals</small>
+    <p>&copy; 2025 Future Animal Encyclopedia</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
