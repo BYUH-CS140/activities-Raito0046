@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Find the Odd Alphabet! | Mini Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Find the Odd Alphabet!</h1>
+    <p class="catch">Find the one different letter and enter it below!</p>
+  </header>
+  <nav class="global-nav">
+    <a href="index.html">Home</a>
+    <a href="mini-game.html" class="active">Mini Game</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+  <main>
+    <div class="game-area">
+      <div id="letters" class="letters-grid"></div>
+      <form id="answer-form" autocomplete="off" class="input-area">
+        <input type="text" id="answer" maxlength="1" required placeholder="?">
+        <button type="submit">Submit</button>
+      </form>
+      <div id="msg" class="msg"></div>
+    </div>
+    <section style="text-align:center; margin-top:2em;">
+      <a href="index.html" class="btn">Back to Home</a>
+    </section>
+  </main>
+  <script src="main.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 Raito Oshiro Personality Test </p>
+  </footer>
+</html>

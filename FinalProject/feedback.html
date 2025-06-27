@@ -2,51 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback | Future Animal Encyclopedia</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feedback</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header: site navigation -->
   <header>
-    <h1>Future Animal Encyclopedia</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="encyclopedia.html">Encyclopedia</a></li>
-        <li><a href="create.html">Create Animal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="feedback.html" class="active">Feedback</a></li>
-      </ul>
-    </nav>
+    <h1>Feedback</h1>
+    <p class="catch">We'd love to hear from you!</p>
   </header>
-  <!-- Feedback form -->
-  <main class="container">
-    <h2>Feedback Form</h2>
-    <form id="feedback-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+  <nav class="global-nav">
+    <a href="index.html">Home</a>
+    <a href="mini-game.html">Mini Game</a>
+    <a href="about.html">About</a>
+    <a href="feedback.html" class="active">Feedback</a>
+  </nav>
+  <main>
+    <form class="feedback-form" id="form">
+      <div class="msg" id="msg"></div>
+      <label for="name">Name (optional)</label>
+      <input type="text" id="name" name="name" maxlength="32">
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" maxlength="64">
       <label for="comments">Comments</label>
       <textarea id="comments" name="comments" rows="4" required></textarea>
       <label for="rating">Rating</label>
       <select id="rating" name="rating" required>
-        <option value="">Please select</option>
-        <option value="5">★★★★★</option>
-        <option value="4">★★★★☆</option>
-        <option value="3">★★★☆☆</option>
-        <option value="2">★★☆☆☆</option>
-        <option value="1">★☆☆☆☆</option>
+        <option value="">Please Select</option>
+        <option value="5">★★★★★ Excellent</option>
+        <option value="4">★★★★☆ Good</option>
+        <option value="3">★★★☆☆ Average</option>
+        <option value="2">★★☆☆☆ Poor</option>
+        <option value="1">★☆☆☆☆ Bad</option>
       </select>
-      <button type="submit" class="btn-main">Submit</button>
+      <button type="submit">Submit</button>
     </form>
-    <div id="feedback-message"></div>
+    <section style="text-align:center; margin-top:2em;">
+      <a href="index.html" class="btn">Back to Home</a>
+    </section>
   </main>
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Future Animal Encyclopedia</p>
-  </footer>
   <script src="main.js"></script>
 </body>
+<footer>
+    <p>&copy; 2025 Raito Oshiro Personality Test </p>
+  </footer>
 </html>
